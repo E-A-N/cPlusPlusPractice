@@ -23,8 +23,12 @@ int main(){
     x = z == 5 ? doubler(x) : tripler(x);
     
     cout << "Testing the preprocessor: " << MONSTER + Monster << "\n";
-    cout << "Twice the monster is: " << double(Monster) << "\n";
+    cout << "Twice the monster is: " << doubler(Monster) << "\n";
     cout << "The value of x is: " << x << "\n";
     cout << "X * Z = " << multiplyer(x,z) << "\n";
+    
+    for (int i = 0; i < 100; i++){
+        cout << "X is currently " << tripler(x) << "\n"; x++;
+    }
     return 0;
 }
