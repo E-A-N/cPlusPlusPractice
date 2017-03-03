@@ -34,3 +34,4 @@ int main(){
     fizzBuzz(fi,bu,100);
     return 0;
 }
+c
