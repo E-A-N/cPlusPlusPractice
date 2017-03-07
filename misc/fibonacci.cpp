@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int fibonacci(int max,int n = 1){
+int fibonacci(int max,int n){
     int result;
 
-    cout << n << "\n";
-    if (n < max ){
-        result = fibonacci(max, n++ - 1);
-    }
-    else {
+    if (n > max){
         result = n;
     }
-
+    else {
+        result = fibonacci(max,n + 1) + fibonacci(max,n + 2);
+    }
+    cout << n << "\n";
     return result;
+
 }
 
 int main(){
     int count = 10;
-    fibonacci(count);
+    fibonacci(count,0);
     return 0;
 }
