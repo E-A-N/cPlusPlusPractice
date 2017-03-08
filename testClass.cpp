@@ -1,4 +1,5 @@
 #include <iostream>
+#include <boost>
 
 class WaterBottle {
     int width,height,weight;
@@ -8,20 +9,14 @@ class WaterBottle {
       int area() {
         return width * height;
       }
-      int volume(){
+      int volume(char liquid[]){
           int radius = width/2;
           int pi = 3.14;
-        return pi*(radius * radius)*height;
+          std::cout << "volume is " << pi*(radius * radius)*height << std::endl;
+          std::cout << liquid << std::endl;
+          //std::cout << "You\'re %s is",liquid << liquid << "!\n";
       }
 };
-
-//overload function with no parameters
-//this is alternative to default parameters
-WaterBottle::WaterBottle(){
-    width = 7;
-    height = 7;
-    weight = 7;
-}
 
 //Class constructor
 WaterBottle::WaterBottle(int wd, int ht, int wt){
@@ -30,8 +25,12 @@ WaterBottle::WaterBottle(int wd, int ht, int wt){
     weight = wt;
 }
 
+
+
 int main(){
   
-  cout << "Testing what\'s wrong!" << endl;
+  WaterBottle wata(5,5,5);
+  wata.volume("Water");
+  std::cout << "Testing what\'s wrong!" << std::endl;
   return 0;
 }
