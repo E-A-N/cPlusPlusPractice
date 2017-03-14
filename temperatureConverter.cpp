@@ -1,39 +1,52 @@
 #include <iostream>
 
-float getFahrenheit(float val){
+float getFahrenheit(float val) {
     return ((val - 32) * 5)/9;
 }
 
-float getCelsius(float val){
+float getCelsius(float val) {
     return ((val * 9)/5) + 32;
 }
 
-float decision(choice){
-    string final;
-  
-    switch(choice){
-      
-      case "c":
-      case "C":
-      case "celsius":
-          final = "c";
-          break;
-          
-      case "f":
-      case "F":
-      case "Fahrenheit":
-          final = "f";
-          break;
-    }
+int collectInput(){
+      float val;
+      std::cout << "Enter the amount of degrees: ";
+      std::cin >> val;
+      //std::cout << val << std::endl;
+      return val;
 }
+
+float decision(int value) {
+    float choice;
+    int degrees = collectInput();
+    switch (value) {
+        case 1:
+            choice = (float)getCelsius(degrees);
+            break;
+        
+        case 2:
+            choice = (float)getFahrenheit(degrees);
+            break;
+    }
+    //std::cout << choice << "\n";
+    return choice;
+}
+
 int main(){
   
-    string choice;
-    std::cout << "convert to Fahrenheit or Celsius?\nenter f or c, q to exit: ";
+    float result;
+    int opt;
+    
+    std::cout << "Enter 1 for Fahrenheit to Celisus\n";
+    std::cout << "Enter 2 for Celisius to Fahrenheit\n";
+    std::cout << "Enter 0 to Quit\n";
+    std::cout << "Menu Choice : ";
+    std::cin  >> opt;
+    
+    if (decision != 0){
+        result = decision(opt);
+    }
 
-    
-    deg = getFahrenheit(deg);
-    std::cout << deg << std::endl;
-    
+    std::cout << result << std::endl;
     return 0;
 }
