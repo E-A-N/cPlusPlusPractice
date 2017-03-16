@@ -2,7 +2,11 @@
 //#include <stdio.h>
 //#include <stdlib.h>
 
-int passByRef(int *arg){
+/*
+    So apparently it's impossible to increment an operator via "++" method, but
+    C/C++ still allow incrementing via other methods.
+*/
+void passByRef(int *arg){
     *arg += 11;
 }
 
@@ -14,11 +18,11 @@ int main(){
   tensue = ean;
   phence = &ean;
 
-  std::cout << &ean << "\n";
+  std::cout << phence << "\n";
   std::cout << ean << std::endl;
 
   std::cout << "Ean is equal to: "<< *phence << std::endl;
-  passByRef(&ean);
+  passByRef(phence);
   passByRef(&ean);
   std::cout << "Ean is now equal to: " << *phence << std::endl;
 
