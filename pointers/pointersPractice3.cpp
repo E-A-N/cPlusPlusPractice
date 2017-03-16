@@ -2,8 +2,8 @@
 //#include <stdio.h>
 //#include <stdlib.h>
 
-int passByRef(int arg){
-    arg++;
+int passByRef(int *arg){
+    *arg += 11;
 }
 
 int main(){
@@ -18,8 +18,8 @@ int main(){
   std::cout << ean << std::endl;
 
   std::cout << "Ean is equal to: "<< *phence << std::endl;
-  passByRef(ean);
-  passByRef(ean);
+  passByRef(&ean);
+  passByRef(&ean);
   std::cout << "Ean is now equal to: " << *phence << std::endl;
 
   return 0;
