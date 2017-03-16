@@ -2,6 +2,10 @@
 //#include <stdio.h>
 //#include <stdlib.h>
 
+int passByRef(int arg){
+    arg++;
+}
+
 int main(){
 
   int ean, tensue;
@@ -14,7 +18,8 @@ int main(){
   std::cout << ean << std::endl;
 
   std::cout << "Ean is equal to: "<< *phence << std::endl;
-  ean++;++ean;
+  passByRef(ean);
+  passByRef(ean);
   std::cout << "Ean is now equal to: " << *phence << std::endl;
 
   return 0;
