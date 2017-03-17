@@ -10,6 +10,10 @@ void passByRef(int *arg){
     *arg += 11;
 }
 
+void arbParams(int *params){
+
+}
+
 int main(){
 
   int ean, tensue;
@@ -27,5 +31,4 @@ int main(){
   std::cout << "Ean is now equal to: " << *phence << std::endl;
 
   return 0;
-
 }
