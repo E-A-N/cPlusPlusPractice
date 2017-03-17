@@ -10,8 +10,8 @@ void passByRef(int *arg){
     *arg += 11;
 }
 
-void arbParams(int *params){
-
+void arbParams(int params[]){
+    std::cout << "1st arg is: " << params[0] << "\n2nd arg is: " << params[1] << std::endl;
 }
 
 int main(){
@@ -29,6 +29,9 @@ int main(){
   passByRef(phence);
   passByRef(&ean);
   std::cout << "Ean is now equal to: " << *phence << std::endl;
+
+  int ray[15] = {1,7};
+  arbParams(ray);
 
   return 0;
 }
