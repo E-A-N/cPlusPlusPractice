@@ -11,6 +11,10 @@ void passByRef(int *arg){
 }
 
 void arbParams(int params[]){
+    /*
+        Change to array that can accept arbitary amount of arguments rather
+        than single array arguments
+    */
     std::cout << "1st arg is: " << params[0] << "\n2nd arg is: " << params[1] << std::endl;
 }
 
@@ -18,6 +22,7 @@ int main(){
 
   int ean, tensue;
   int *phence;
+
   ean = 29;
   tensue = ean;
   phence = &ean;
