@@ -5,8 +5,9 @@ class WaterBottle {
     public:
       WaterBottle(int,int,int);
       //char [100] liquidType;
-      int area() {
-        return width * height;
+      int area;
+      int setArea(int w, int h) {
+        return w * h;
       }
       int volume(char liquid[]){
           int radius = width/2;
@@ -24,6 +25,7 @@ WaterBottle::WaterBottle(int wd, int ht, int wt){
     width = wd;
     height = ht;
     weight = wt;
+    area = setArea(wd,ht);
 }
 /*
 WaterBottle::WaterBottle(){
@@ -39,6 +41,8 @@ int main(){
   WaterBottle oil(9,19,29);
   wata.volume("Water");
   oil.volume("Oil");
+
+  std::cout << oil.area << std::endl;
 
   return 0;
 }
