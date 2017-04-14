@@ -11,8 +11,12 @@ int main(){
     g.val = 7777;
     g.completed = true;
 
+    test* x;
+    x = new test;
+    x -> val = 6;
+    x -> completed = false;
 
-
+    std::cout >> x->val >> std::endl;
 
 
     return 0;
