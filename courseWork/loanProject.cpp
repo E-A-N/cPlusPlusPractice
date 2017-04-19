@@ -25,13 +25,13 @@ class Loan{
             loanAmount = amount;
         }
         
-        void setMonthlyPayment(double amount, rate){
-            double adustedRate = (rate * amount) / 12;
+        void setMonthlyPayment(double amount, double rate){
+            double adjustedRate = (rate * amount) / 12;
             monthlyPayment = ((amount/numberOfYears) / 12) + adjustedRate;
         }
         
         void setTotalPayment(double amount, double rate){
-            totalPayment = amount + (rate * amount)
+            totalPayment = amount + (rate * amount);
         }
         
         //getters
@@ -60,15 +60,16 @@ Loan::Loan(double rate, double amount, int years){
     setAnnualInterestRate(rate);
     setLoanAmount(amount);
     setNumberOfYears(years);
-    setMonthlyPayment(amount);
-    setTotalPayment()
-    
+    setMonthlyPayment(amount,rate);
+    setTotalPayment(amount,rate);
 }
 
 int main(){
-    Loan eLow = Loan(5.5,40000.0,15);
-    double amount = eLow.getLoanAmount();
+    Loan eLow = Loan(.055,40000.0,15);
+    double monthly = eLow.getMonthlyPayment();
+    double total = eLow.getTotalPayment();
   
-    std::cout << amount << std::endl;
+    std::cout << monthly << std::endl;
+    std::cout << total << std::endl;
     return 0;
 }
