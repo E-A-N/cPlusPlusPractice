@@ -57,6 +57,8 @@ Loan::Loan(double rate, double amount, int years){
 
 int main(){
     Loan eLow = Loan(5.5,40000.0,15);
+    double amount = eLow.getLoanAmount();
   
+    std::cout << amount << std::endl;
     return 0;
 }
