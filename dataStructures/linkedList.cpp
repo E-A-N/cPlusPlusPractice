@@ -1,18 +1,19 @@
 #include <iostream>
+#include <string.h>
 
 struct Node {
     int data;
+    string name;
     Node* next; //reference next node via pointer
 };
 
-int main(){
+int main() {
 
-    Node head = Node();
-    Node second = Node();
-    head.next = &second;
+    Node *head=new Node();
+    head->name = "Hi";
+    head->next = new Node();
 
-    char name[] = 'Herro';
-    char str = "5";
-    std::cout >> str >> std::endl;
+    std::cout << head->name << std::endl;
+
     return 0;
 }
