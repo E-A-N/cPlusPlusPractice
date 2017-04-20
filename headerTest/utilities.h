@@ -1,6 +1,14 @@
-#include <iostream>
+#ifndef _util
 
-int addThese(int n1, int n2){
+/*
+   This is a test header file
+*/
 
-    return n1 + n2;
+namespace utilities {
+    int addThese(int n1, int n2){
+
+        return n1 + n2;
+    }
 }
+
+#endif

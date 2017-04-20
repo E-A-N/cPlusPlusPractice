@@ -1,8 +1,10 @@
 #include <iostream>
-#include <utilities>
+#include "utilities.h"
 
 int main(){
 
-    int eighteen = addThese(9,9);
+    int eighteen = utilities::addThese(9,9);
+
+    std::cout << eighteen << std::endl;
     return 0;
 }
