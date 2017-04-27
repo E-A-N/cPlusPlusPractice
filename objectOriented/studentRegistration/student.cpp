@@ -9,12 +9,14 @@ public:
 		name = "";
 		student_id = 0;
 	}
-
-	student::~student(){
+	student::student(string n, int s) {
+		name = n;
+		student_id = s;
+	}
+	student::~student() {
 	}
 
 	void student::add_course(int course) {
 		course_id.push_back(course)
 	}
 };
-
