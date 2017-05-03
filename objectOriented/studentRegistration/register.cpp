@@ -46,12 +46,27 @@ int main() {
 			std::cout << "Enter your student id" << std::endl;
 			std::cin >> studentID;
 			findStudentID(studentID)
+            std::cout << "Enter course id" << std::endl;
+            std::cin >> courseID;
+            add_cource(courseID);
 			break;
 
 		case 2:
+            std::cout << "Enter your student id" << std::endl;
+            std::cin >> studentID;
+            findStudentID(studentID)
+            std::cout << "Enter course id" << std::endl;
+            std::cin >> courseID;
+            drop_cource(courseID);
 			break;
 
 		case 3:
+            std::cout << "Enter your student id" << std::endl;
+            std::cin >> studentID;
+            findStudentID(studentID)
+            std::cout << "Enter course id" << std::endl;
+            std::cin >> courseID;
+            print(courseID);
 			break;
 		}
 	}
