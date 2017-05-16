@@ -1,10 +1,11 @@
-#include "Worker.h"
 #include <string>
+#include "Worker.h"
+
 
 void Worker::setCompany(std::string c){
     company = c;
 }
 
-string Worker::getCompany(){
+std::string Worker::getCompany(){
     return company;
 }

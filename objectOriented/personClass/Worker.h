@@ -4,7 +4,7 @@
 class Worker: public Person{
     public:
         void setCompany();
-        string getCompany();
+        std::string getCompany();
     protected:
         std::string company;
 };

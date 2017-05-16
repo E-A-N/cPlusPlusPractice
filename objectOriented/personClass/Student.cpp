@@ -1,5 +1,10 @@
-class Student: public Person {
+#include <iostream>
+#include "Student.h"
 
-    protected:
-        std::string school;
+void Student::setSchool(std::string schoolArg){
+    school = schoolArg
+}
+
+std::string Student::getSchool(){
+    return school
 }
