@@ -3,21 +3,9 @@
 #include <person.h>
 //Base class
 
-void person::setName(std::string n){
-    name = n;
+void person::setName(std::string nameArg){
+    name = nameArg;
 }
-void person::setGender(std::string g){
-    gender = g;
+void person::setGender(std::string genderArg){
+    gender = genderArg;
 }
-
-class Student: public Person {
-
-    protected:
-        std::string school;
-}
-
-class Worker: public Person{
-
-    protected:
-        std::string company;
-};

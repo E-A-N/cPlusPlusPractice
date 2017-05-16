@@ -3,6 +3,7 @@
 
 class Worker: public Person{
     public:
+        Worker();
         void setCompany();
         std::string getCompany();
     protected:
