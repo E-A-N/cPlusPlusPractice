@@ -3,9 +3,10 @@
 #include <person.h>
 //Base class
 
-void person::setName(std::string nameArg){
+Person::Person();
+void Person::setName(std::string nameArg){
     name = nameArg;
 }
-void person::setGender(std::string genderArg){
+void Person::setGender(std::string genderArg){
     gender = genderArg;
 }

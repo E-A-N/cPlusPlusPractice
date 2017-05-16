@@ -1,7 +1,11 @@
 #include <string>
 #include "Worker.h"
 
-void Worker(){
+Worker::Worker(){
+    init = true;
+}
+
+Worker::~Worker(){
 
 }
 
