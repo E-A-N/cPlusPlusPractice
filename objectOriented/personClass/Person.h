@@ -18,15 +18,3 @@ class Person {
         std::string birthDate;
 
 };
-
-class Student: public Person {
-
-    protected:
-        std::string school;
-}
-
-class Worker: public Person{
-
-    protected:
-        std::string company;
-};
