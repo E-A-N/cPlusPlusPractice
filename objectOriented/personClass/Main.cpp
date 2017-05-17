@@ -5,7 +5,8 @@
 
 int main(){
 
-    Worker Ean = new Worker();
+    //Worker* Ean = new Worker();
+    Worker Ean;
 
     return 0;
 }

@@ -1,13 +1,13 @@
 #include <string>
 #include "Person.h"
 
-class Worker: public Person{
+class Worker: virtual public Person{
     public:
         Worker();
         ~Worker();
-        void setCompany();
+        void setCompany(std::string c);
         std::string getCompany();
-    protected:
+    private:
         std::string company;
         bool init;
 };

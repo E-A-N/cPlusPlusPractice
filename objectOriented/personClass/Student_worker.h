@@ -3,6 +3,6 @@
 #include "Student.h"
 #include "Worker.h"
 
-class StudentWorker: public Student, public Worker{
-    
+class StudentWorker: virtual public Student, virtual public Worker{
+
 }

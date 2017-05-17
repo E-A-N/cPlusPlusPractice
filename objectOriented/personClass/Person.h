@@ -11,7 +11,7 @@ class Person {
         void setName();
         void setGender();
 
-    protected:
+    private:
         std::string name;
         std::string gender;
         std::string identification;

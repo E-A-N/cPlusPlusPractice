@@ -2,7 +2,7 @@
 #include <string>
 #include "Person.h"
 
-class Student: public Person {
+class Student: virtual public Person {
     public:
         void setSchool();
         std::string getSchool();
