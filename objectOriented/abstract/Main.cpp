@@ -5,4 +5,7 @@ using namespace std;
 
 int main(){
 
+      vector<Shape*>  shape_array;
+  
+      return 0;
 }
